@@ -1,6 +1,7 @@
 <script>
     import { owners } from '../stores/getOwnersStore.js';
-    import OwnerCard from '../components/ownerCard.svelte';
+    import CurrentOwnerCard from '../components/currentOwnerCard.svelte';
+    import PastOwnerCard from '../components/pastOwnerCard.svelte';
 
     let searchTerm = '';
     let filteredOwners = [];
@@ -26,17 +27,27 @@
 
 <div class="container">
     {#each filteredOwners as owner}
-        <OwnerCard owner={owner} />
+    {#if owner.isCurrent === 'yes'}
+        <CurrentOwnerCard owner={owner} />
+    {/if}        
     {/each}
 </div>
 
+<div class="container">
+    {#each filteredOwners as owner}
+    {#if owner.isCurrent === 'no'}
+        <PastOwnerCard owner={owner} />
+    {/if}        
+    {/each}
+</div>
 
 
 <style>
     .container {
         display: grid;
         gap: 1rem;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 2rem;
     }
 
     @media screen and (max-width: 800px) {

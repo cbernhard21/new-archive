@@ -19,9 +19,13 @@ const fetchOwners = async () => {
             regLoses: item.regLoses,
             regWinPercentage: item.regWinPercentage,
             playoffWins: item.playoffWins,
-            playoffLoses: item.playoffLoses
+            playoffLoses: item.playoffLoses,
+            isCurrent: item.isCurrent
         };
     });
+    //sort by alphabetical order
+    loadedOwners.sort((a, b) => a.lastName.localeCompare(b.lastName));
+
     owners.set(loadedOwners);
 };
 
