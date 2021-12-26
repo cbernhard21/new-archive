@@ -4,7 +4,10 @@
 
 <Nav/>
 
-<slot></slot>
+<main>
+    <slot></slot>
+</main>
+
 
 
 <style>
@@ -12,5 +15,9 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+    }
+    main {
+        max-width: 75%;
+        margin: 0 auto;
     }
 </style>
