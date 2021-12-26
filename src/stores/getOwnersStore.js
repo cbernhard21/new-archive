@@ -25,20 +25,23 @@ import { writable } from "svelte/store";
 export const owners = writable([]);
 
 const fetchOwners = async () => {
-    const url = `https://pokeapi.co/api/v2/pokemon?limit=150`;
+    // const url = `https://pokeapi.co/api/v2/pokemon?limit=150`;
+    const url = `https://opensheet.vercel.app/1b8yX7nWWkK4Pjui2i8Y9jcX4zzCmL3O9AWKs1dvObtg/main`;
     const res = await fetch(url);
     const data = await res.json();
-
-    const loadedOwners = data.results.map((data, index) => {
+    
+    const loadedOwners = data.map((item, index) => {
         return {
-            teamName: data.name,
+            firstName: item.firstName,
+            lastName: item.lastName,
+            teamName: item.teamName,
             id: index + 1
         };
     });
     owners.set(loadedOwners);
 };
 
-// fetchOwners();
+fetchOwners();
 
 
 
