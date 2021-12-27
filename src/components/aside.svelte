@@ -8,8 +8,7 @@
     aside {
         width: 100%;
         height: 100%;
-        background-color: var(--white);
-        color: var(--black);
+        background-color: var(--light-grey);
         padding: 1rem;
     }
     

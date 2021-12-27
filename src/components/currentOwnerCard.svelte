@@ -15,12 +15,13 @@
 
     .card {
         padding: 1.5rem;
-        background-color: var(--lighter-grey);
+        background-color: var(--white);
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-shadow: 3px 3px 5px var(--light-grey);
     }
 
     h2 {

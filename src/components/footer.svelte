@@ -8,8 +8,8 @@
     footer {
         width: 100%;
         text-align: center;
-        background-color: var(--lighter-grey);
-        color: var(--black);
+        background-color: var(--black);
+        color: var(--white);
         padding: 1rem;
     }
     

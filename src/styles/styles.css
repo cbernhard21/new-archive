@@ -1,10 +1,9 @@
 :root {
-    --white: #d4d4d4;
-    --black: #111;
-    --primary-text: #4c4c4c;
-    --lighter-grey: #bcbcbc;
-    --light-grey: #acacac;
-    --dark-white: #eee;
+    --white: #f3f3f3;
+    --black: #0e0e0e;
+    --grey: #4c4c4c;
+    --light-grey: #dbdbdb;
+
 }
 
 
@@ -17,13 +16,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
-    color: var(--primary-text);
+    color: var(--black);
     background-color: var(--white);
 }
 
 a {
     text-decoration: none;
-    color: var(--primary-text);
+    color: var(--black);
 }
 
 h1 {

@@ -11,12 +11,12 @@
 <style>
 
     nav {
-        background-color: var(--black);
+        background-color: #fff;
         padding: 1rem;
     }
 
     nav a {
-        color: var(--white);
+        color: var(--black);
         font-weight: 400;
     }
 
