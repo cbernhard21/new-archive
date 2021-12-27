@@ -1,6 +1,32 @@
+:root {
+    --white: #d4d4d4;
+    --black: #111;
+    --primary-text: #4c4c4c;
+    --lighter-grey: #bcbcbc;
+    --light-grey: #acacac;
+    --dark-white: #eee;
+}
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    color: var(--primary-text);
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+h1 {
+    font-weight: 700;
 }
 

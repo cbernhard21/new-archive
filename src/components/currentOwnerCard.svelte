@@ -15,11 +15,15 @@
 
     .card {
         padding: 1.5rem;
-        background-color: #eee;
+        background-color: var(--lighter-grey);
         border-radius: 5px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        color: #333;
+    }
+
+    h2 {
+        text-align: center;
     }
 </style>

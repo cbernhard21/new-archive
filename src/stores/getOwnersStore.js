@@ -20,6 +20,7 @@ const fetchOwners = async () => {
             regWinPercentage: item.regWinPercentage,
             playoffWins: item.playoffWins,
             playoffLoses: item.playoffLoses,
+            playoffWinPercentage: item.playoffWinPercentage,
             isCurrent: item.isCurrent
         };
     });

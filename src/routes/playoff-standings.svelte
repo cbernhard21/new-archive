@@ -20,9 +20,9 @@
         {#if owner.isCurrent === 'yes'}
             <div class="row">
                 <span>{owner.teamName}</span>
-                <span>{owner.regWins}</span>
-                <span>{owner.regLoses}</span> 
-                <span>{owner.regWinPercentage}</span> 
+                <span>{owner.playoffWins}</span>
+                <span>{owner.playoffLoses}</span> 
+                <span>{owner.playoffWinPercentage}</span> 
             </div>
         {/if}
     {/each}
@@ -40,9 +40,9 @@
         {#if owner.isCurrent === 'no'}
             <div class="row">
                 <span>{owner.teamName}</span>
-                <span>{owner.regWins}</span>
-                <span>{owner.regLoses}</span> 
-                <span>{owner.regWinPercentage}</span> 
+                <span>{owner.playoffWins}</span>
+                <span>{owner.playoffLoses}</span> 
+                <span>{owner.playoffWinPercentage}</span> 
             </div>
         {/if}
     {/each}

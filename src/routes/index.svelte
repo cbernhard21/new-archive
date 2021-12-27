@@ -20,9 +20,6 @@
     <title>EJFFL Archive</title>
 </svelte:head>
 
-
-<h1>Ernie J's Fantasy Football League</h1>
-
 <input type="text" bind:value={searchTerm} placeholder="Search Teams">
 
 <div class="container">
@@ -40,7 +37,6 @@
     {/if}        
     {/each}
 </div>
-
 
 <style>
     .container {
