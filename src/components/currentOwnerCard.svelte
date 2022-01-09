@@ -2,7 +2,7 @@
     export let owner;
 </script>
 
-<a  class="card" href={`/owners/${owner.firstName}`}>
+<a  class="card" href={`/owners/${owner.teamName}`}>
     <h2>{owner.teamName}</h2>
     <p>{owner.firstName} {owner.lastName}</p>
 </a>

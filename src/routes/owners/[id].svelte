@@ -10,8 +10,8 @@
 
 <script>
     export let owner;
-    let name = owner[0].firstName;
+    let name = owner[0].teamName;
     console.log(name)
 </script>
 
-<h1>{owner[0].lastName}</h1>
+<h1>{owner[0].firstName} {owner[0].lastName}</h1>
