@@ -13,8 +13,15 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* scroll-behavior: smooth; */
+  }
+
 body {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
     min-height: 100vh;
     color: var(--black);
     background-color: var(--white);
@@ -27,5 +34,6 @@ a {
 
 h1 {
     font-weight: 700;
+    font-size: 4rem;
 }
 

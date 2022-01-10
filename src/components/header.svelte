@@ -11,9 +11,9 @@
     header {
         width: 100%;
         text-align: center;
-        background-color: var(--lighter-grey);
+        background-color: #fff;
         color: var(--black);
-        padding: 1rem;
+        padding: 2.5rem 1rem;
     }
     
 </style>

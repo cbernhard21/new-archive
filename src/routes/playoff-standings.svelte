@@ -1,12 +1,13 @@
 <script>
     import { owners } from '../stores/getOwnersStore';
+    import StandingsTable from '../components/standingsTable.svelte'
 </script>
 
 <svelte:head>
     <title>Regular Season Standings</title>
 </svelte:head>
 
-<h1>Regular Season Standings</h1>
+<h1>Playoff Standings</h1>
 
 <h2>Current Owners</h2>
 <div class="grid-table">
@@ -18,12 +19,12 @@
     </div>
     {#each $owners as owner}
         {#if owner.isCurrent === 'yes'}
-            <div class="row">
-                <span>{owner.teamName}</span>
-                <span>{owner.playoffWins}</span>
-                <span>{owner.playoffLoses}</span> 
-                <span>{owner.playoffWinPercentage}</span> 
-            </div>
+            <StandingsTable 
+                teamName={owner.teamName} 
+                playoffWins={owner.playoffWins}
+                playoffLoses={owner.playoffLoses}
+                playoffWinPercentage={owner.playoffWinPercentage}
+            />
         {/if}
     {/each}
 </div>
@@ -38,12 +39,12 @@
     </div>
     {#each $owners as owner}
         {#if owner.isCurrent === 'no'}
-            <div class="row">
-                <span>{owner.teamName}</span>
-                <span>{owner.playoffWins}</span>
-                <span>{owner.playoffLoses}</span> 
-                <span>{owner.playoffWinPercentage}</span> 
-            </div>
+            <StandingsTable 
+                teamName={owner.teamName} 
+                playoffWins={owner.playoffWins}
+                playoffLoses={owner.playoffLoses}
+                playoffWinPercentage={owner.playoffWinPercentage}
+            />
         {/if}
     {/each}
 </div>

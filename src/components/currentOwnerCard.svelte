@@ -22,6 +22,11 @@
         justify-content: center;
         align-items: center;
         box-shadow: 3px 3px 5px var(--light-grey);
+        transition: all 0.2s ease-in;
+    }
+
+    .card:hover {
+        background-color: #ddd;
     }
 
     h2 {

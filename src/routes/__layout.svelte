@@ -3,7 +3,7 @@
     import Nav from '../components/nav.svelte';
     import Header from '../components/header.svelte';
     import Footer from '../components/footer.svelte';
-    import Aside from '../components/aside.svelte';
+
 
     let headerText = "The EJFFL Archieve";
 
@@ -14,10 +14,7 @@
         <Header headerText={headerText}/>
     </div>
 
-    <div class="aside">
-        <Aside/>
-    </div>
-    
+  
     <div class="nav">
         <Nav/>
     </div>
@@ -37,35 +34,33 @@
     .page-grid {
         height: calc(100vh - 1px);
         display: grid;
-        grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
-        grid-template-rows: min-content min-content 1fr min-content;
+        grid-template-columns: minmax(10px, max-content) minmax(10px, 3fr);
+        grid-template-rows: min-content 1fr min-content;
         grid-gap: 1px;
         grid-template-areas:
             "header header"
-            "aside nav"
-            "aside main"
+            "nav main"
+            "nav main"
             "footer footer";
     }
 
     .header{
         /* background-color: #FFCDD2; */
         grid-area: header;
-}
-
-    .aside{
-        /* background-color: #E1BEE7; */
-        grid-area: aside;
     }
 
     .nav{
-        /* background-color: #BBDEFB; */
+        background-color: var(--light-grey);
         grid-area: nav;
+        display: flex;
+        justify-content: end;
     }
 
     .main{
         background-color: var(--dark-white);
         grid-area: main;
         padding: 1rem;
+        padding-right: 2rem;
     }
 
     .footer{

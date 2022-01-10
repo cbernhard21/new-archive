@@ -23,6 +23,7 @@
 <input type="text" bind:value={searchTerm} placeholder="Search Teams">
 
 <div class="container">
+    <h2>Current Teams</h2>
     {#each filteredOwners as owner}
     {#if owner.isCurrent === 'yes'}
         <CurrentOwnerCard owner={owner} />
@@ -31,6 +32,7 @@
 </div>
 
 <div class="container">
+    <h2>Past Teams</h2>
     {#each filteredOwners as owner}
     {#if owner.isCurrent === 'no'}
         <PastOwnerCard owner={owner} />
@@ -44,6 +46,10 @@
         gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 2rem;
+    }
+
+    h2 {
+        grid-column: 1/-1
     }
 
     @media screen and (max-width: 800px) {
