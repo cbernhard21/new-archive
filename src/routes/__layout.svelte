@@ -23,9 +23,9 @@
         <slot></slot>
     </main>
     
-    <div class="footer">
+    <!-- <div class="footer">
         <Footer/>
-    </div>
+    </div> -->
 </div>
 
 
@@ -34,14 +34,12 @@
     .page-grid {
         height: calc(100vh - 1px);
         display: grid;
-        grid-template-columns: minmax(10px, max-content) minmax(10px, 3fr);
-        grid-template-rows: min-content 1fr min-content;
+        grid-template-columns: minmax(10px, 1fr) minmax(10px, 3fr);
+
         grid-gap: 1px;
         grid-template-areas:
-            "header header"
-            "nav main"
-            "nav main"
-            "footer footer";
+            "nav header"
+            "nav main";
     }
 
     .header{
@@ -50,7 +48,7 @@
     }
 
     .nav{
-        background-color: var(--light-grey);
+        background-color: var(--black);
         grid-area: nav;
         display: flex;
         justify-content: end;
