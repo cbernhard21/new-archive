@@ -24,6 +24,7 @@
 
 <div class="container">
     <h2>Current Teams</h2>
+
     {#each filteredOwners as owner}
     {#if owner.isCurrent === 'yes'}
         <CurrentOwnerCard owner={owner} />
